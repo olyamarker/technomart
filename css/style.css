@@ -1,48 +1,113 @@
 @font-face {
-    font-family: "Cuprum", "Roboto", sans-serif;
-    src: url(../fonts/cuprum.woff) format("woff"); 
-    src: url(../fonts/cuprum.woff2) format("woff2"); 
-    font-style: normal; 
-    font-weight: 400; 
+  font-family: "Cuprum";
+  src: url("../fonts/cuprum.woff") format("woff"),
+    url("../fonts/cuprum.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
 }
 
 @font-face {
-    font-family: "Cuprum", "Roboto", sans-serif;
-    src: url(../fonts/cuprumitalic.woff) format("woff"); 
-    src: url(../fonts/cuprumitalic.woff2) format("woff2"); 
-    font-style: italic; 
-    font-weight: 400; 
+  font-family: "Cuprum";
+  src: url("../fonts/cuprumitalic.woff") format("woff"),
+    url("../fonts/cuprumitalic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 400;
 }
 
 @font-face {
-    font-family: "Cuprum", "Roboto", sans-serif;
-    src: url(../fonts/cuprumbold.woff) format("woff"); 
-    src: url(../fonts/cuprumbold.woff2) format("woff2"); 
-    font-style: normal; 
-    font-weight: 700; 
+  font-family: "Cuprum";
+  src: url("../fonts/cuprumbold.woff") format("woff"),
+    url("../fonts/cuprumbold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
 }
 
 @font-face {
-    font-family: "Cuprum", "Roboto", sans-serif;
-    src: url(../fonts/cuprumbolditalic.woff) format("woff"); 
-    src: url(../fonts/cuprumbolditalic.woff2) format("woff2"); 
-    font-style: italic; 
-    font-weight: 700; 
+  font-family: "Cuprum";
+  src: url("../fonts/cuprumbolditalic.woff") format("woff"),
+    url("../fonts/cuprumbolditalic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 700;
 }
 
 @font-face {
-    font-family: "PT Sans", "Roboto", sans-serif;
-    src: url(../fonts/ptsans.woff) format("woff"); 
-    src: url(../fonts/ptsans.woff2) format("woff2"); 
-    font-style: normal; 
-    font-weight: 400; 
+  font-family: "PT Sans";
+  src: url("../fonts/ptsans.woff") format("woff"),
+    url("../fonts/ptsans.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
 }
 
 @font-face {
-    font-family: "PT Sans", "Roboto", sans-serif;
-    src: url(../fonts/ptsansbold.woff) format("woff"); 
-    src: url(../fonts/ptsansbold.woff2) format("woff2"); 
-    font-style: normal; 
-    font-weight: 700; 
+  font-family: "PT Sans";
+  src: url("../fonts/ptsansbold.woff") format("woff"),
+    url("../fonts/ptsansbold.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 700;
 }
 
+.page {
+  --black: #000000;
+  --white: #ffffff;
+  --basic-red: #ee3643;
+  --basic-green: #63a63e;
+  --basic-grey: #293449;
+  --basic-extra-grey: #32425c;
+  --basic-greylight: #c5c5c5;
+  --basic-background: #f1f5f7;
+
+  --special-yellow: #ffbf47;
+  --special-blue: #3bbce3;
+  --special-lilac: #dc91d8;
+  --special-greenlight: #8ed78f;
+  --special-yellowlight: #ffd180;
+
+  --success: #5fbb2d;
+  --warning: #ffbf47;
+  --error: #ba2732;
+}
+
+.page-body {
+  font-family: "PT Sans", "Roboto", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--black);
+  background-color: var(--white);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main-header {
+  background: var(--basic-background);
+}
+
+.menu {
+  background-color: var(--basic-grey);
+  font-family: "Cuprum", "Roboto", sans-serif;
+  color: var(--white);
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.main-header-logo {
+  max-width: 220px;
+  height: inherit;
+  background: #ee3643;
+  /* box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24); */
+}
+
+.site-navigation a {
+  color: var(--white);
+}
