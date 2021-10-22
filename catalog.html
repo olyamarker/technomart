@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="pages" lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8" />
     <title>HTML Academy: «Техномарт»</title>
@@ -38,15 +38,17 @@
         </ul>
       </div>
       <!-- /.menu -->
-      <h1>
+      <h1 class="main-header-title">
         Интернет-магазин строительных материалов и инструментов для ремонта
       </h1>
-      <a href="tel:+78005558628">+7 800 555-86-28</a>
-      <p>г. Санкт-Петербург, наб. Реки Карповки, 5 лит П</p>
-      <p>Равшан Джамшутович</p>
+      <a class="main-header-tel" href="tel:+78005558628">+7 800 555-86-28</a>
+      <p class="main-header-adress">
+        г. Санкт-Петербург, наб. Реки Карповки, 5 лит П
+      </p>
+      <p class="main-header-username">Равшан Джамшутович</p>
       <a class="logout-link" href="blank.html"><img src="" alt="Выйти" /></a>
-      <a href="blank.html">Мои заказы</a>
-      <a href="blank.html">Личный кабинет</a>
+      <a class="main-header-orders" href="blank.html">Мои заказы</a>
+      <a class="main-header-personal-area" href="blank.html">Личный кабинет</a>
       <div class="menu-bottom">
         <nav class="main-navigation">
           <ul>
@@ -64,32 +66,38 @@
     </header>
 
     <main class="container">
-      <ul>
-        <li>
-          <a href="index.html"><img src="" alt="Главная" /></a>
+      <ul class="breadcrumbs-list">
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link" href="index.html"
+            ><img src="" alt="Главная"
+          /></a>
         </li>
-        <li>
-          <a href="blank.html">Каталог</a>
+        <li class="breadcrumbs-item" class="breadcrumbs-item">
+          <a class="breadcrumbs-link" href="blank.html">Каталог</a>
         </li>
-        <li>
-          <a href="blank.html">Инструмент</a>
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link" href="blank.html">Инструмент</a>
         </li>
-        <li>
-          <a>Перфораторы</a>
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-link">Перфораторы</a>
         </li>
       </ul>
-      <h1>Перфораторы</h1>
       <section>
-        <h2>Фильтр:</h2>
-        <form method="get" action="https://echo.htmlacademy.ru">
-          <fieldset>
-            <legend>Цена:</legend>
+        <h2 class="section-title catalog-title">Перфораторы</h2>
+        <h3 class="filter-title">Фильтр:</h3>
+        <form
+          class="filter-form"
+          method="get"
+          action="https://echo.htmlacademy.ru"
+        >
+          <fieldset class="filter-attribute">
+            <legend class="filter-attribute-title">Цена:</legend>
             <!-- Здесь будет слайдер type="range" -->
           </fieldset>
-          <fieldset>
-            <legend>Производители:</legend>
-            <ul>
-              <li>
+          <fieldset class="filter-attribute">
+            <legend class="filter-attribute-title">Производители:</legend>
+            <ul class="filter-list">
+              <li class="filter-item">
                 <label>
                   <input
                     type="checkbox"
@@ -98,6 +106,8 @@
                     checked
                   />Bosch
                 </label>
+              </li>
+              <li class="filter-item">
                 <label>
                   <input
                     type="checkbox"
@@ -105,6 +115,8 @@
                     name="interskol"
                   />Интерскол
                 </label>
+              </li>
+              <li class="filter-item">
                 <label>
                   <input
                     type="checkbox"
@@ -113,6 +125,8 @@
                     checked
                   />Makita
                 </label>
+              </li>
+              <li class="filter-item">
                 <label>
                   <input
                     type="checkbox"
@@ -120,6 +134,8 @@
                     name="dewalt"
                   />Dewalt
                 </label>
+              </li>
+              <li class="filter-item">
                 <label>
                   <input
                     type="checkbox"
@@ -130,10 +146,10 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
-            <legend>Питание:</legend>
-            <ul>
-              <li>
+          <fieldset class="filter-attribute">
+            <legend class="filter-attribute-title">Питание:</legend>
+            <ul class="filter-list">
+              <li class="filter-item">
                 <label>
                   <input
                     type="radio"
@@ -144,7 +160,7 @@
                   />Аккумуляторные
                 </label>
               </li>
-              <li>
+              <li class="filter-item">
                 <label>
                   <input
                     type="radio"
@@ -156,15 +172,16 @@
               </li>
             </ul>
           </fieldset>
-          <button type="submit">Показать</button>
+          <button class="button catalog-button" type="submit">Показать</button>
         </form>
       </section>
       <section>
-        <h2>Сортировка:</h2>
-        <ul>
-          <li>По цене</li>
-          <li>По типу</li>
-          <li>По функционалу</li>
+        <!-- здесь надо явно секции поменять: сортировка должна быть отдельно от результатов-->
+        <h3 class="sorting-title">Сортировка:</h3>
+        <ul class="filter-list">
+          <li class="filter-item">По цене</li>
+          <li class="filter-item">По типу</li>
+          <li class="filter-item">По функционалу</li>
           <button>вверх</button>
           <button>вниз</button>
         </ul>
@@ -232,7 +249,7 @@
         </ul>
       </section>
       <section>
-        <h2>Пара слов о перфораторах</h2>
+        <h2 class="section-title">Пара слов о перфораторах</h2>
         <p>
           Перфоратор — универсальный строительный инструмент. Предназначен для
           сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют

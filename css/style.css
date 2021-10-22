@@ -31,7 +31,7 @@
 }
 
 @font-face {
-  font-family: "PT Sans";
+  font-family: "PT Sans", "Roboto", sans-serif;
   src: url("../fonts/ptsans.woff") format("woff"),
     url("../fonts/ptsans.woff2") format("woff2");
   font-style: normal;
@@ -39,7 +39,7 @@
 }
 
 @font-face {
-  font-family: "PT Sans";
+  font-family: "PT Sans", "Roboto", sans-serif;
   src: url("../fonts/ptsansbold.woff") format("woff"),
     url("../fonts/ptsansbold.woff2") format("woff2");
   font-style: normal;
@@ -68,14 +68,16 @@
   --warning: #ffbf47;
   --error: #ba2732;
 
+  --catalog-background: #f7f3ec;
+  --background-wrapper-top: #f9f5f0;
+  --social-media-background: #212a3a;
   --button-hover: #ca2c37;
   --secondary-grey-number: 169, 169, 169;
   --old-price: rgb(var(--secondary-grey-number));
-  --background-wrapper-top: #f9f5f0;
   --border-item: #eaeaea;
+  --border-filter-button: #e5e5e5;
   --shadow-grey: #405069;
   --secondary-white: #f3f7f9;
-  --social-media-background: #212a3a;
 }
 
 .page-body {
@@ -121,7 +123,7 @@ img {
 }
 
 .text {
-  font-family: "PT Sans";
+  font-family: "PT Sans", "Roboto", sans-serif;
   font-size: 13px;
   line-height: 24px;
 }
@@ -167,7 +169,7 @@ img {
   color: rgba(var(--white-number), 0.5);
 }
 
-.main-header-subtitle {
+.main-header-title {
   font-style: italic;
   font-weight: 400;
   font-size: 16px;
@@ -181,10 +183,25 @@ img {
   line-height: 30px;
   color: var(--basic-red);
   border: 3px solid var(--white);
+  text-decoration: none;
 }
 
 .main-header-adress {
   color: var(--basic-extra-grey);
+}
+
+.main-header-username {
+  font-size: 21px;
+  line-height: 21px;
+  background-color: var(--white);
+}
+
+.main-header-orders,
+.main-header-personal-area {
+  color: var(--basic-extra-grey);
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: none;
 }
 
 .login-link,
@@ -235,6 +252,15 @@ img {
 
 .main-navigation a:active {
   color: rgba(var(--white-number), 0.5);
+}
+/* Стили для основного содержимого */
+.breadcrumbs-item {
+  list-style: none;
+}
+
+.breadcrumbs-link {
+  color: inherit;
+  text-decoration: none;
 }
 
 /* Стили для категорий услуг */
@@ -325,7 +351,7 @@ img {
 
 .best-sellers-item {
   list-style: none;
-  font-family: "PT Sans";
+  font-family: "PT Sans", "Roboto", sans-serif;
   font-weight: bold;
   font-size: 17px;
   line-height: 18px;
@@ -458,6 +484,65 @@ img {
   width: 300px;
 }
 
+/* Стили для каталога */
+
+.catalog-title {
+  color: var(--basic-extra-grey);
+  background-color: var(--basic-background);
+}
+
+.filter-title {
+  font-family: "PT Sans", "Roboto", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  background-color: var(--catalog-background);
+}
+
+.filter-form {
+  text-transform: uppercase;
+}
+
+.filter-attribute {
+  border: none;
+}
+
+.filter-attribute-title {
+  font-family: "PT Sans", "Roboto", sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.filter-list {
+  list-style: none;
+}
+
+.filter-item {
+  font-family: "PT Sans", "Roboto", sans-serif;
+  font-size: 15px;
+  line-height: 19px;
+}
+
+.catalog-button {
+  font-family: "PT Sans", "Roboto", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--black);
+  background-color: var(--white);
+  border: 1px solid var(--border-filter-button);
+  border-radius: 2px;
+}
+
+.catalog-button:hover {
+  border-color: var(--basic-greylight);
+  background-color: var(--white);
+}
+
+.catalog-button:active {
+  border-color: var(--basic-red);
+  background-color: var(--white);
+}
 /* Стили для футера */
 
 .main-footer {
@@ -536,7 +621,7 @@ img {
 .appeal-form input[type="text"],
 .appeal-form input[type="email"],
 .appeal-form textarea {
-  font-family: "PT Sans";
+  font-family: "PT Sans", "Roboto", sans-serif;
   font-size: 13px;
   line-height: 24px;
   color: var(--old-price);
