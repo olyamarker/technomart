@@ -105,12 +105,13 @@ img {
   align-items: center;
   width: 200px;
   height: 38px;
-  color: var(--white);
-  background-color: var(--basic-red);
   font-family: "Cuprum";
   font-size: 14px;
   line-height: 18px;
   text-transform: uppercase;
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--basic-red);
   border: none;
 }
 
@@ -357,6 +358,8 @@ img {
   line-height: 18px;
 }
 
+/* Повторяется в каталоге. Переименовать */
+
 .best-sellers-item-name {
   font-size: 18px;
   line-height: 20px;
@@ -524,6 +527,23 @@ img {
   line-height: 19px;
 }
 
+.sorting {
+  background-color: var(--catalog-background);
+}
+
+.sorting-title,
+.sorting-item {
+  font-family: "PT Sans", "Roboto", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.sorting-item {
+  list-style: none;
+  opacity: 0.3;
+}
+
 .catalog-button {
   font-family: "PT Sans", "Roboto", sans-serif;
   font-size: 13px;
@@ -543,6 +563,16 @@ img {
   border-color: var(--basic-red);
   background-color: var(--white);
 }
+
+.catalog-navigation-page {
+  list-style: none;
+}
+
+/* Стили для раздела «О продукте» */
+.about-product {
+  background-color: var(--basic-background);
+}
+
 /* Стили для футера */
 
 .main-footer {
