@@ -247,26 +247,31 @@ img {
 }
 
 .main-navigation {
-  position: relative;
-  margin: 0;
-  padding: 0;
+  margin-bottom: 60px;
+  padding-left: 21px;
+  padding-right: 21px;
   background-color: var(--basic-extra-grey);
+  box-shadow: inset 0px -5px 0px #293449;
 }
 
-.main-navigation::after {
-  content: "";
-  position: absolute;
-  /* top: 10px; */
-  width: 100%;
-  height: 5px;
-  background-color: var(--basic-grey);
+.main-navigation ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
 }
 
 .main-navigation li {
+  flex-grow: 1;
+  text-align: center;
   list-style: none;
 }
 
 .main-navigation a {
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 20px;
+  text-decoration: none;
   color: var(--white);
 }
 
@@ -288,6 +293,11 @@ img {
 }
 
 /* Стили для категорий услуг */
+
+.categories {
+  padding-top: 59px;
+  padding-bottom: 59px;
+}
 
 .categories-wrapper {
   display: grid;
@@ -393,6 +403,14 @@ img {
   display: contents;
 }
 
+.popular-manufacturers {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
 .popular-manufactures-title,
 .best-sellers-title {
   color: var(--basic-extra-grey);
@@ -401,6 +419,19 @@ img {
 .popular-manufactures-button,
 .best-sellers-button {
   width: 192px;
+}
+
+.popular-manufactures-list {
+  display: contents;
+}
+
+.popular-manufactures-list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 145px;
+  border: 1px solid var(--border-item);
 }
 
 .best-sellers-item {
@@ -431,25 +462,6 @@ img {
   height: 38px;
   color: var(--white);
   background-image: url("../img/red-button.svg");
-}
-
-.popular-manufacturers {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(4, 1fr);
-}
-
-.popular-manufactures-list {
-  display: contents;
-}
-
-.popular-manufactures-list li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 220px;
-  height: 145px;
-  border: 1px solid var(--border-item);
 }
 
 /* Стили для сервисов */
@@ -529,6 +541,8 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 .about {
