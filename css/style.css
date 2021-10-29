@@ -47,6 +47,8 @@
 }
 
 .page {
+  height: 100%;
+
   --black: #000;
   --white-number: 255, 255, 255;
   --white: rgb(var(--white-number));
@@ -86,6 +88,16 @@
   line-height: 24px;
   color: var(--black);
   background-color: var(--white);
+
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  /* padding: 0 10px; */
 }
 
 img {
@@ -129,6 +141,8 @@ img {
   line-height: 24px;
 }
 
+/* стили для header */
+
 .logo {
   background: var(--basic-red);
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
@@ -138,13 +152,11 @@ img {
   background: var(--error);
 }
 
-/* стили для header */
-
 .main-header {
   background: var(--basic-background);
 }
 
-.menu {
+.main-header-top {
   background-color: var(--basic-grey);
   color: var(--white);
 }
@@ -170,7 +182,14 @@ img {
   color: rgba(var(--white-number), 0.5);
 }
 
+.main-header-center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .main-header-title {
+  max-width: 200px;
+  padding-left: 30px;
   font-style: italic;
   font-weight: 400;
   font-size: 16px;
@@ -179,6 +198,8 @@ img {
 }
 
 .main-header-tel {
+  display: block;
+  width: 270px;
   font-weight: 700;
   font-size: 21px;
   line-height: 30px;
@@ -189,6 +210,8 @@ img {
 
 .main-header-adress {
   color: var(--basic-extra-grey);
+  font-size: 14px;
+  line-height: 24px;
 }
 
 .main-header-username {
@@ -266,14 +289,31 @@ img {
 
 /* Стили для категорий услуг */
 
-.categories {
+.categories-wrapper {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
   color: var(--white);
+}
+
+.categories-item {
+  list-style: none;
 }
 
 .categories-title {
   visibility: hidden;
   margin: 0;
   height: 0;
+}
+
+.categories-list {
+  display: contents;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  padding: 0;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
 }
 
 .categories-materials {
@@ -289,17 +329,19 @@ img {
 }
 
 .categories-sales {
+  order: 1;
   background-color: var(--special-greenlight);
 }
 
 .categories-delivery {
+  order: 2;
   background-color: var(--special-yellow);
 }
 
-.categories-list {
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 30px;
+.categories-slider {
+  order: 0;
+  grid-column: 1 / span 2;
+  grid-row: span 2;
 }
 
 .categories-button {
@@ -336,8 +378,19 @@ img {
 
 /* Стили для популярных товаров и производителей */
 
+.best-sellers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
 .wrapper-top {
+  grid-column: 1 / -1;
   background-color: var(--background-wrapper-top);
+}
+
+.best-sellers-list {
+  display: contents;
 }
 
 .popular-manufactures-title,
@@ -380,8 +433,14 @@ img {
   background-image: url("../img/red-button.svg");
 }
 
+.popular-manufacturers {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .popular-manufactures-list {
-  display: flex;
+  display: contents;
 }
 
 .popular-manufactures-list li {
@@ -396,6 +455,8 @@ img {
 /* Стили для сервисов */
 
 .services {
+  padding-top: 64px;
+  padding-bottom: 99px;
   background-color: var(--basic-background);
 }
 
@@ -463,6 +524,21 @@ img {
 }
 
 /* Стили для описания компании*/
+
+.about-contacts-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.about {
+  grid-column: 2 span;
+  max-width: 460px;
+}
+
+.about-product {
+  background-color: var(--basic-background);
+}
 
 .company-item {
   list-style-type: none;
@@ -566,11 +642,6 @@ img {
 
 .catalog-navigation-page {
   list-style: none;
-}
-
-/* Стили для раздела «О продукте» */
-.about-product {
-  background-color: var(--basic-background);
 }
 
 /* Стили для футера */
