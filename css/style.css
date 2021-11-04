@@ -144,7 +144,21 @@ img {
 /* стили для header */
 
 .logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
   background: var(--basic-red);
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  bottom: -5px;
+  background-color: inherit;
   box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
 }
 
@@ -161,6 +175,16 @@ img {
   color: var(--white);
 }
 
+.main-header-top-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-navigation {
+  display: flex;
+
+}
+
 .site-navigation li {
   list-style: none;
 }
@@ -168,9 +192,12 @@ img {
 .site-navigation a {
   color: var(--white);
   text-transform: uppercase;
+  text-decoration: none;
 }
 
 .checkout {
+  margin-left: 26px;
+  width: 150px;
   background-color: var(--basic-green);
 }
 
@@ -666,43 +693,60 @@ img {
 }
 
 .main-footer-logo {
-  width: 220px;
+  height: 63px;
+  margin-bottom: 22px;
 }
 
 .main-footer-top-container {
+  padding-bottom: 54px;
   display: flex;
   justify-content: space-between;
 }
 
-.main-footer-wrapper-info {
-  /* display: flex; */
-  flex-basis: 100%;
-}
-
-.footer-navigation {
-  display: flex;
-  justify-content: space-between;
-  min-width: 546px;
+.footer-adress {
+  margin: 0;
 }
 
 .footer-tel {
   color: inherit;
+  text-decoration: none;
+}
+
+.footer-navigation {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 37px;
+  margin-bottom: 34px;
+  margin-left: auto;
+  padding: 0;
 }
 
 .footer-navigation li {
+  margin-left: 58px;
   list-style: none;
 }
 
 .footer-navigation a {
   color: var(--basic-background);
+  text-decoration: none;
+}
+
+.footer-categories {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
 }
 
 .footer-categories li {
   list-style: none;
+  margin-left: 58px;
 }
 
 .footer-categories a {
   color: var(--special-yellowlight);
+  text-decoration: none;
 }
 
 .main-footer-bottom {
