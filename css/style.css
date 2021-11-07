@@ -137,6 +137,7 @@ img {
 }
 
 .text {
+  margin: 0;
   font-family: "PT Sans", "Roboto", sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -345,6 +346,7 @@ img {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  margin-bottom: 59px;
 }
 
 .result {
@@ -623,7 +625,13 @@ img {
 }
 
 .about-product {
+  padding-top: 64px;
+  padding-bottom: 68px;
   background-color: var(--basic-background);
+}
+
+.about-product-title {
+  margin-bottom: 25px;
 }
 
 .company-item {
@@ -704,8 +712,13 @@ img {
   line-height: 19px;
 }
 
+button.filter-button {
+  width: 220px;
+}
+
 .sorting {
   display: flex;
+  align-items: center;
   background-color: var(--catalog-background);
 }
 
