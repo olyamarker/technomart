@@ -89,6 +89,7 @@
   color: var(--black);
   background-color: var(--white);
 
+  min-width: 940px;
   min-height: 100vh;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
