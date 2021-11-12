@@ -13,7 +13,7 @@
   <body class="page-body">
     <header class="main-header">
       <div class="main-header-top">
-        <div class="container">
+        <div class="site-navigation container">
           <a class="logo main-header-logo">
             <img
               src="img/logo-technomart.svg"
@@ -22,23 +22,20 @@
               alt="Логотип интернет-магазина «Техномарт»"
             />
           </a>
-          <form method="get" action="https://echo.htmlacademy.ru">
+          <form
+            class="main-header-search"
+            method="get"
+            action="https://echo.htmlacademy.ru"
+          >
             <input type="text" name="search" placeholder="Поиск:" />
-            <button type="submit"></button>
+            <!-- <button type="submit"></button> -->
           </form>
-          <ul class="site-navigation">
-            <li>
-              <a href="blank.html">Закладки</a>
-            </li>
-            <li>
-              <a href="blank.html">Корзина</a>
-            </li>
-            <li>
-              <a class="button checkout" href="blank.html">Оформить заказ</a>
-            </li>
-          </ul>
+          <div class="order">
+            <a class="order-bookmarks" href="blank.html">Закладки</a>
+            <a class="order-cart" href="blank.html">Корзина</a>
+          </div>
+          <a class="button checkout" href="blank.html">Оформить заказ</a>
         </div>
-        <!-- /.container -->
       </div>
       <!-- /.main-header-top -->
       <div class="container">
